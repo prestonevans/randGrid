@@ -1,0 +1,84 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --square: 80px;
+  --padding: 1rem;
+}
+
+body {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.square {
+  height: var(--square);
+  width: var(--square);
+  border-radius: 50%;
+  background-color: white;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--padding);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--padding);
+}
+
+.grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--padding);
+  padding: var(--padding);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grid > * {
+  padding: var(--padding);
+  border-radius: 2rem;
+}
+
+.color-1 {
+  background-color: #f6bd60;
+  grid-area: 1/1/2/span 2;
+}
+
+.color-2 {
+  background-color: #c2bbb2;
+}
+
+.color-3 {
+  background-color: #f5cac3;
+  grid-area: 1/4/span 2;
+}
+
+.color-4 {
+  background-color: #84a59d;
+}
+
+.color-5 {
+  background-color: #f28482;
+  grid-area: 2/2/auto/span 2;
+}
+
+@media only screen and (max-width: 1000px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
